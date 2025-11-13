@@ -31,20 +31,6 @@ O projeto possui um menu com dois exercícios principais:
    - Exibe os nomes em **ordem crescente** (A-Z)
    - Exibe os nomes em **ordem decrescente** (Z-A)
 
-## Estrutura do Código
-
-```
-ArrayExercises.java
-├── main()                  # Método principal com menu
-├── exibirMenu()           # Exibe menu visual
-├── exercicioNumeros()     # Exercício 1: Pares e ímpares
-├── exercicioNomes()       # Exercício 2: Ordenação
-├── separarPares()         # Separa apenas números pares
-├── separarImpares()       # Separa apenas números ímpares
-├── exibirArray()          # Exibe arrays de strings
-└── exibirArrayNumeros()   # Exibe arrays de números
-```
-
 ## Como executar
 
 ### 1. Clone o repositório:
