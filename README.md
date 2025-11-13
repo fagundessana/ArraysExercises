@@ -35,7 +35,7 @@ O projeto possui um menu com dois exercícios principais:
 
 ### 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/array-exercises.git
+git clone https://github.com/fagundessana/array-exercises.git
 ```
 
 ### 2. Navegue até o diretório:
