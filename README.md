@@ -54,8 +54,16 @@ java com.mycompany.arrayexercises.ArrayExercises
 ```
 
 ## Exemplo de uso
+<img width="461" height="107" alt="image" src="https://github.com/user-attachments/assets/a1d2ec9b-9357-40f3-a984-12cf52a7117b" />
+> **Figura 1:** Menu visual
 
-images
+<img width="442" height="350" alt="image" src="https://github.com/user-attachments/assets/19874532-b315-4edc-bd14-66fe1d99ccfb" />
+> **Figura 2:** Execução do exercício de números pares e ímpares
+
+<img width="501" height="118" alt="image" src="https://github.com/user-attachments/assets/4c2235a0-9658-4c05-bd8c-a8b339760b96" />
+<img width="423" height="586" alt="image" src="https://github.com/user-attachments/assets/f13f63ef-f0a6-4af7-9bff-8eba1c28edaf" />
+<img width="487" height="152" alt="image" src="https://github.com/user-attachments/assets/0d88d471-4c81-4ce2-9fb0-a57150acf3b3" />
+
 
 
 ## 🧠 Tecnologias Utilizadas  
