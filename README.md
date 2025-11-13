@@ -1,8 +1,8 @@
-# Algoritmo: Array Exercises
+# 🔗 Algoritmo: Array Exercises
 
 Este algoritmo consiste em uma atividade desenvolvida em sala de aula, tendo como principal objetivo a utilização dos conhecimentos adquiridos, como:
 
-## Conceitos utilizados:
+## 👾Conceitos utilizados:
 - Manipulação de **arrays** (vetores)
 - Estruturas de repetição (`for`, `do-while`)
 - Estruturas condicionais (`if`, `switch-case`)
@@ -13,7 +13,7 @@ Este algoritmo consiste em uma atividade desenvolvida em sala de aula, tendo com
 
 Neste projeto Java contém exercícios de manipulação de arrays, separação de dados e ordenação, utilizando a classe `Scanner` para interação com o usuário.
 
-## Conteúdo do projeto
+## 🗃️Conteúdo do projeto
 
 O projeto possui um menu com dois exercícios principais:
 
@@ -31,7 +31,7 @@ O projeto possui um menu com dois exercícios principais:
    - Exibe os nomes em **ordem crescente** (A-Z)
    - Exibe os nomes em **ordem decrescente** (Z-A)
 
-## Como executar
+## 🚀Como executar
 
 ### 1. Clone o repositório:
 ```bash
@@ -58,12 +58,17 @@ java com.mycompany.arrayexercises.ArrayExercises
 images
 
 
-## Tecnologias
+## 🧠 Tecnologias Utilizadas  
 
 - **Linguagem:** Java
 - **JDK:** 8 ou superior
 - **Bibliotecas:** `java.util.Scanner`, `java.util.Arrays`, `java.util.Collections`
 
-## Autor
 
-Desenvolvido como exercício de aprendizado em programação Java.
+### 👩‍💻 Autoria
+
+**Ana Beatriz Araujo Fagundes**  
+Estudante de Desenvolvimento de Sistemas (AMS) – ETEC Zona Leste
+
+
+---
