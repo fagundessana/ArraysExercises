@@ -64,21 +64,19 @@ java com.mycompany.arrayexercises.ArrayExercises
 ---
 <img width="501" height="118" alt="image" src="https://github.com/user-attachments/assets/4c2235a0-9658-4c05-bd8c-a8b339760b96" />
 
+> **Figura 3:** Menu visual, escolha do segundo exercício
+
 ---
 <img width="423" height="586" alt="image" src="https://github.com/user-attachments/assets/f13f63ef-f0a6-4af7-9bff-8eba1c28edaf" />
+
+> **Figura 4:** Execução do exercício de nomes em ordem crescente e decrescente
 
 ---
 <img width="487" height="152" alt="image" src="https://github.com/user-attachments/assets/0d88d471-4c81-4ce2-9fb0-a57150acf3b3" />
 
-
-
-> **Figura 2:** Execução do exercício de números pares e ímpares
-
-> **Figura 3:** Menu visual, escolha do segundo exercício
-
-> **Figura 4:** Execução do exercício de nomes em ordem crescente e decrescente
-
 > **Figura 5:** Menu visual, escolha do encerramento do programa
+---
+
 
 ## 🧠 Tecnologias Utilizadas  
 
