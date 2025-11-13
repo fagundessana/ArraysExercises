@@ -84,6 +84,7 @@ java com.mycompany.arrayexercises.ArrayExercises
 - **JDK:** 8 ou superior
 - **Bibliotecas:** `java.util.Scanner`, `java.util.Arrays`, `java.util.Collections`
 
+---
 
 ### 👩‍💻 Autoria
 
