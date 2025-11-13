@@ -1,4 +1,3 @@
-
 package com.mycompany.arrayexercises;
 
 //importação de bibliotecas
@@ -19,30 +18,24 @@ public class ArrayExercises {
             opcao = sc.nextInt();
             sc.nextLine(); //limpa o buffer
             
+            
             // Bloco Switch Case, responsável pelo menu
             switch (opcao) {
-                case 1://opção 1: Nomes em ordem crescente
-                    nomesOrdemCrescente(sc);
+                case 1://opção 1: Digitar vários números e separar pares/ímpares
+                    exercicioNumeros(sc);
                     break;
-                case 2://opção 2: Nomes em ordem decrescente
-                    nomesOrdemDecrescente(sc);
-                    break;
-                case 3://opção 3: Números ímpares
-                    numerosImpares();
-                    break;
-                case 4://opção 4: Números pares
-                    numerosPares();
+                case 2://opção 2: Digitar vários nomes e ordenar crescente/decrescente
+                    exercicioNomes(sc);
                     break;
                 case 0://opção 0: Fechará o programa
-                    System.out.println("Encerrando programa... Obrigado!");
+                    System.out.println("║  Encerrando programa... Obrigado!      ║");
                     break;
                 default:// Mensagem de opção inválida
-                    System.out.println("❌ Opcao invalida! Tente novamente.");
+                    System.out.println(" Opcao invalida! Tente novamente.");
             }
             
             //Se a opção for diferente de 0 (zero), o loop dará continuidade por meio da tecla ENTER
             if (opcao != 0) {
-                System.out.println("\n" + "=".repeat(50) + "\n");
                 System.out.println("Pressione ENTER para continuar...");
                 sc.nextLine();
             }
@@ -54,138 +47,159 @@ public class ArrayExercises {
     
     // Exibe o menu de forma visual
     public static void exibirMenu() {
-        System.out.println("=== MENU DE EXERCICIOS - ARRAYS ===");
-        System.out.println("1 - Nomes em Ordem Crescente (A-Z)");
-        System.out.println("2 - Nomes em Ordem Decrescente (Z-A)");
-        System.out.println("3 - Numeros Impares de 0 a 100");
-        System.out.println("4 - Numeros Pares de 0 a 100");
-        System.out.println("0 - Sair");
+        System.out.println("      MENU DE EXERCICIOS - ARRAYS                    ");
+        System.out.println("  1 - Digitar Numeros (Exibir Pares e Impares)       ");
+        System.out.println("  2 - Digitar Nomes (Crescente e Decrescente)        ");
+        System.out.println("  0 - Sair                                            ");
     }
     
-    // Exercício 1: Nomes em ordem crescente
-    public static void nomesOrdemCrescente(Scanner sc) {
-        System.out.println("EXERCICIO 1: Nomes em Ordem Crescente\n");
+    // EXERCÍCIO 1: Digitar vários números e exibir pares e ímpares
+    public static void exercicioNumeros(Scanner sc) {
+        System.out.println("      EXERCICIO 1: NUMEROS PARES E IMPARES           ");
         
-        System.out.print("Quantos nomes deseja ordenar? ");//mensagem
+        System.out.print("Quantos numeros deseja digitar? ");//mensagem
         int qtd = sc.nextInt();//variável que irá armazenar a quantidade informada pelo usuário
-        sc.nextLine();
+        sc.nextLine();//limpa o buffer
         
-        String[] nomes = new String[qtd];//variável que armazenará os nomes informados
+        int[] numeros = new int[qtd];//array que armazenará os números digitados
         
         System.out.println();
-        //Loop For
+        //Loop For - lê os números do usuário
         for (int i = 0; i < qtd; i++) {// i inicia com o valor de 0 (zero), condicional, incremento
-            System.out.print("Digite o nome " + (i + 1) + ": ");//mensagem
-            nomes[i] = sc.nextLine();
+            System.out.print("Digite o numero " + (i + 1) + ": ");//mensagem
+            numeros[i] = sc.nextInt();
+        }
+        sc.nextLine();//limpa o buffer
+        
+        // Exibe os números digitados
+        System.out.println("\n" + "─".repeat(60));
+        System.out.println("NUMEROS DIGITADOS:");
+        System.out.println("─".repeat(60));
+        exibirArrayNumeros(numeros);
+        
+        // Separa os números em pares e ímpares
+        int[] pares = separarPares(numeros);
+        int[] impares = separarImpares(numeros);
+        
+        // Exibe os números PARES
+        System.out.println(" NUMEROS PARES:");
+        if (pares.length > 0) {
+            exibirArrayNumeros(pares);
+            System.out.println("Total de numeros pares: " + pares.length);
+        } else {
+            System.out.println("Nenhum numero par encontrado.");
         }
         
-        System.out.println("\n--- Nomes Originais ---");//exibe os nomes inseridos 
-        exibirArray(nomes);
-        
-        Arrays.sort(nomes);//é essa linha que organiza os nomes em ordem crescente
-        
-        //Exibe o resultado final
-        System.out.println("\n Nomes em Ordem CRESCENTE (A-Z) ---");
-        exibirArray(nomes);
+        // Exibe os números ÍMPARES
+        System.out.println(" NUMEROS IMPARES:");
+        if (impares.length > 0) {
+            exibirArrayNumeros(impares);
+            System.out.println("Total de numeros impares: " + impares.length);
+        } else {
+            System.out.println("Nenhum numero impar encontrado.");
+        }
     }
     
-    // Exercício 2: Nomes em ordem decrescente
-    public static void nomesOrdemDecrescente(Scanner sc) {
-        System.out.println("EXERCICIO 2: Nomes em Ordem Decrescente\n");
+    // EXERCÍCIO 2: Digitar vários nomes e exibir em ordem crescente e decrescente
+    public static void exercicioNomes(Scanner sc) {
+        System.out.println("║  EXERCICIO 2: NOMES CRESCENTE E DECRESCENTE         ║");
         
-        System.out.print("Quantos nomes deseja ordenar? ");//mensagem
+        System.out.print("Quantos nomes deseja digitar? ");//mensagem
         int qtd = sc.nextInt();//armazena quantidade inserida pelo usuário
-        sc.nextLine();
+        sc.nextLine();//limpa o buffer
         
         String[] nomes = new String[qtd];//armazena nomes
         
         System.out.println();
-        //Loop For
+        //Loop For - lê os nomes do usuário
         for (int i = 0; i < qtd; i++) {// i inicia com o valor de 0 (zero), condicional, incremento
             System.out.print("Digite o nome " + (i + 1) + ": ");//mensagem
             nomes[i] = sc.nextLine();
         }
         
-        System.out.println("\n--- Nomes Originais ---");//exibe nomes inseridos inicialmente
+        // Exibe os nomes digitados
+        System.out.println("? NOMES DIGITADOS:");
         exibirArray(nomes);
         
-        Arrays.sort(nomes, Collections.reverseOrder());//aqui é a linha responsável por organizar os nomes em ordem descrescente
+        // Cria cópias do array para não perder a ordem original
+        String[] nomesCrescente = Arrays.copyOf(nomes, nomes.length);
+        String[] nomesDecrescente = Arrays.copyOf(nomes, nomes.length);
         
-        //exibição do resultado final
-        System.out.println("\nNomes em Ordem DECRESCENTE (Z-A) ---");
-        exibirArray(nomes);
+        // Ordena em ORDEM CRESCENTE (A-Z)
+        Arrays.sort(nomesCrescente);
+        
+        // Ordena em ORDEM DECRESCENTE (Z-A)
+        Arrays.sort(nomesDecrescente, Collections.reverseOrder());
+        
+        // Exibe nomes em ORDEM CRESCENTE
+        System.out.println("️  ORDEM CRESCENTE (A-Z):");
+        exibirArray(nomesCrescente);
+        
+        // Exibe nomes em ORDEM DECRESCENTE
+        System.out.println("⬇️  ORDEM DECRESCENTE (Z-A):");
+        exibirArray(nomesDecrescente);
     }
     
-    // Exercício 3: Números ímpares de 0 a 100
-    public static void numerosImpares() {
-        System.out.println(" EXERCICIO 3: Numeros Impares de 0 a 100\n");
-        
-        // Conta quantos ímpares existem de 0 a 100
+    // Método que separa apenas os números PARES de um array
+    public static int[] separarPares(int[] numeros) {
+        // Primeiro: conta quantos números pares existem
         int contador = 0;//variável contadora
-        //Loop For
-        for (int i = 0; i <= 100; i++) {// i inicia com o valor de 0 (zero), condicional, incremento
-            //aqui só conta
-            if (i % 2 != 0) {
+        for (int i = 0; i < numeros.length; i++) {// i inicia com o valor de 0 (zero), condicional, incremento
+            if (numeros[i] % 2 == 0) {// Se o resto da divisão por 2 for 0, é PAR
                 contador++;
             }
         }
         
-        // Cria o array com o tamanho correto
-        int[] impares = new int[contador];//o indice guarda os números que foram contados pela variável contador
-        
-        int indice = 0;
-        for (int i = 0; i <= 100; i++) {// i inicia com o valor de 0 (zero), condicional, incremento
-             // e aqui preenche o array com os números ímpares
-            if (i % 2 != 0) {
-                impares[indice] = i;
-                indice++;
-            }
-        }
-        
-        System.out.println(" Total de numeros impares: " + impares.length);//exibe mensagem do total
-        System.out.println("\n--- Numeros Impares ---");
-        exibirArrayNumeros(impares);
-    }
-    
-    // Exercício 4: Números pares de 0 a 100
-    public static void numerosPares() {
-        System.out.println(" EXERCICIO 4: Numeros Pares de 0 a 100\n");
-        
-        // Conta quantos pares existem de 0 a 100
-        int contador = 0;//variável contadora
-        for (int i = 0; i <= 100; i++) {// i inicia com o valor de 0 (zero), condicional, incremento
-            //conta
-            if (i % 2 == 0) {
-                contador++;
-            }
-        }
-        
-        // Cria o array com o tamanho correto
+        // Segundo: cria o array com o tamanho correto
         int[] pares = new int[contador];
         
-        // preenche o array com os números pares
+        // Terceiro: preenche o array com os números pares
         int indice = 0;
-        for (int i = 0; i <= 100; i++) {
-            if (i % 2 == 0) {
-                pares[indice] = i;
-                indice++;
+        for (int i = 0; i < numeros.length; i++) {// i inicia com o valor de 0 (zero), condicional, incremento
+            if (numeros[i] % 2 == 0) {
+                pares[indice] = numeros[i];//guarda o número par na posição do indice
+                indice++;//avança para a próxima posição
             }
         }
         
-        System.out.println("\n--- Numeros Pares ---");//exibição
-        exibirArrayNumeros(pares);
+        return pares;//retorna o array preenchido com os números pares
     }
     
-    // Método para exibir array de strings
+    // Método que separa apenas os números ÍMPARES de um array
+    public static int[] separarImpares(int[] numeros) {
+        // Primeiro: conta quantos números ímpares existem
+        int contador = 0;//variável contadora
+        for (int i = 0; i < numeros.length; i++) {// i inicia com o valor de 0 (zero), condicional, incremento
+            if (numeros[i] % 2 != 0) {// Se o resto da divisão por 2 for diferente de 0, é ÍMPAR
+                contador++;
+            }
+        }
+        
+        // Segundo: cria o array com o tamanho correto
+        int[] impares = new int[contador];
+        
+        // Terceiro: preenche o array com os números ímpares
+        int indice = 0;
+        for (int i = 0; i < numeros.length; i++) {// i inicia com o valor de 0 (zero), condicional, incremento
+            if (numeros[i] % 2 != 0) {
+                impares[indice] = numeros[i];//guarda o número ímpar na posição do indice
+                indice++;//avança para a próxima posição
+            }
+        }
+        
+        return impares;//retorna o array preenchido com os números ímpares
+    }
+    
+    // Método para exibir array de strings (nomes)
     public static void exibirArray(String[] arr) {
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {// i inicia com o valor de 0 (zero), condicional, incremento
             System.out.println((i + 1) + ". " + arr[i]);
         }
     }
     
     // Método para exibir array de números (mais compacto)
     public static void exibirArrayNumeros(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {// i inicia com o valor de 0 (zero), condicional, incremento
             System.out.print(arr[i]);
             if (i < arr.length - 1) {
                 System.out.print(", ");
