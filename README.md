@@ -55,6 +55,7 @@ java com.mycompany.arrayexercises.ArrayExercises
 
 ## Exemplo de uso
 <img width="461" height="107" alt="image" src="https://github.com/user-attachments/assets/a1d2ec9b-9357-40f3-a984-12cf52a7117b" />
+
 > **Figura 1:** Menu visual, escolha do primeiro exercício
 ---
 <img width="442" height="350" alt="image" src="https://github.com/user-attachments/assets/19874532-b315-4edc-bd14-66fe1d99ccfb" />
