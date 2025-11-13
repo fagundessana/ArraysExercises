@@ -60,6 +60,7 @@ java com.mycompany.arrayexercises.ArrayExercises
 ---
 <img width="442" height="350" alt="image" src="https://github.com/user-attachments/assets/19874532-b315-4edc-bd14-66fe1d99ccfb" />
 
+> **Figura 2:** Execução do exercício de números pares e ímpares
 ---
 <img width="501" height="118" alt="image" src="https://github.com/user-attachments/assets/4c2235a0-9658-4c05-bd8c-a8b339760b96" />
 
@@ -70,7 +71,6 @@ java com.mycompany.arrayexercises.ArrayExercises
 <img width="487" height="152" alt="image" src="https://github.com/user-attachments/assets/0d88d471-4c81-4ce2-9fb0-a57150acf3b3" />
 
 
-> **Figura 1:** Menu visual, escolha do primeiro exercício
 
 > **Figura 2:** Execução do exercício de números pares e ímpares
 
